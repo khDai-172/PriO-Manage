@@ -32,5 +32,9 @@ class ProgressHeaderView: UICollectionReusableView {
         containerView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
         containerView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.85).isActive = true
+        
+        upperView.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        upperView.bottomAnchor.constraint(equalTo: lowerView.bottomAnchor).isActive = true
+        lowerView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
 }
