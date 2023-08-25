@@ -30,6 +30,7 @@
 		831365692A9203AF00578093 /* TextViewContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831365682A9203AF00578093 /* TextViewContentView.swift */; };
 		8313656B2A93114D00578093 /* DatePickerContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313656A2A93114D00578093 /* DatePickerContentView.swift */; };
 		8313656D2A96FC8E00578093 /* ReminderListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313656C2A96FC8E00578093 /* ReminderListStyle.swift */; };
+		8313656F2A985B3E00578093 /* ProgressHeraderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313656E2A985B3E00578093 /* ProgressHeraderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		831365682A9203AF00578093 /* TextViewContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewContentView.swift; sourceTree = "<group>"; };
 		8313656A2A93114D00578093 /* DatePickerContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerContentView.swift; sourceTree = "<group>"; };
 		8313656C2A96FC8E00578093 /* ReminderListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListStyle.swift; sourceTree = "<group>"; };
+		8313656E2A985B3E00578093 /* ProgressHeraderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHeraderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				8313654E2A82478B00578093 /* ReminderListViewController+DataSource.swift */,
 				831365522A84850400578093 /* ReminderListViewController+Actions.swift */,
 				831365502A847CBC00578093 /* ReminderDoneButton.swift */,
+				8313656E2A985B3E00578093 /* ProgressHeraderView.swift */,
 			);
 			path = ListViewController;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				831365532A84850400578093 /* ReminderListViewController+Actions.swift in Sources */,
 				831365552A85D1AA00578093 /* ReminderViewController.swift in Sources */,
 				831365492A822B8B00578093 /* Date+PriOManage.swift in Sources */,
+				8313656F2A985B3E00578093 /* ProgressHeraderView.swift in Sources */,
 				8313656D2A96FC8E00578093 /* ReminderListStyle.swift in Sources */,
 				831365652A8F202800578093 /* UIContentConfiguration+Stateless.swift in Sources */,
 				831365692A9203AF00578093 /* TextViewContentView.swift in Sources */,
