@@ -16,6 +16,15 @@ class ProgressHeaderView: UICollectionReusableView {
     private let containerView = UIView(frame: .zero)
     private var heightConstraint: NSLayoutConstraint?
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        prepareSubviews()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     func prepareSubviews() {
         containerView.addSubview(upperView)
         containerView.addSubview(lowerView)
