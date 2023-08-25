@@ -46,5 +46,10 @@ class ProgressHeaderView: UICollectionReusableView {
         // make an adjustable height constraint for the lower view
         heightConstraint = lowerView.heightAnchor.constraint(equalToConstant: 0)
         heightConstraint?.isActive = true
+        
+        backgroundColor = .clear
+        containerView.backgroundColor = .clear
+        upperView.backgroundColor = .prioProgressUpperBackground
+        lowerView.backgroundColor = .prioProgressLowerBackground
     }
 }
