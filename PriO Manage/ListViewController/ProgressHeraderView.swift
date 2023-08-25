@@ -9,4 +9,5 @@ import UIKit
 
 class ProgressHeaderView: UICollectionReusableView {
     
+    var progress: CGFloat = 0
 }
