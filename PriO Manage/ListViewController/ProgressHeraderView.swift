@@ -9,7 +9,11 @@ import UIKit
 
 class ProgressHeaderView: UICollectionReusableView {
     
-    var progress: CGFloat = 0
+    var progress: CGFloat = 0 {
+        didSet {
+            heightConstraint?.constant = progress * bounds.height
+        }
+    }
     
     private let upperView = UIView(frame: .zero)
     private let lowerView = UIView(frame: .zero)
