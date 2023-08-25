@@ -14,6 +14,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        UINavigationBar.appearance().tintColor = .prioGradientTodayEnd
+        UINavigationBar.appearance().backgroundColor = .prioNavigationBackground
+        let navBarAppearance = UINavigationBarAppearance()
+        navBarAppearance.configureWithTransparentBackground()
+        UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
         return true
     }
 
