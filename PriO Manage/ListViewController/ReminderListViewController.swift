@@ -49,11 +49,14 @@ class ReminderListViewController: UICollectionViewController {
             navigationItem.style = .navigator
         }
         
+        // Register Supplementary cell
+        let headerRegistration = UICollectionView.SupplementaryRegistration(elementKind: ProgressHeaderView.elementKind, handler: supplementaryRegistrationHandler)
+        dataSource.supplementaryViewProvider = { supplementaryView, elementKind, indexPath in
+            return self.collectionView.dequeueConfiguredReusableSupplementary(using: headerRegistration, for: indexPath)
+        }
+        
         // Register cell
         let cellRegistration = UICollectionView.CellRegistration(handler: cellRegistrationHandler)
-        
-        // Register Supplementary vieww
-        let headerRegistration = UICollectionView.SupplementaryRegistration(elementKind: ProgressHeaderView.elementKind, handler: supplementaryRegistrationHandler)
         
         // connect diffable data source to the collection view by passing in the collection view to its initializer
         dataSource = DataSource(collectionView: collectionView) {
