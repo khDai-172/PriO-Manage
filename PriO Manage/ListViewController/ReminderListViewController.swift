@@ -22,6 +22,8 @@ class ReminderListViewController: UICollectionViewController {
         ReminderListStyle.today.name, ReminderListStyle.future.name, ReminderListStyle.all.name
     ])
     
+    var headerView: ProgressHeaderView?
+    
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
