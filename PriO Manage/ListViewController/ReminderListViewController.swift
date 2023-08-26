@@ -48,13 +48,7 @@ class ReminderListViewController: UICollectionViewController {
         if #available(iOS 16, *) {
             navigationItem.style = .navigator
         }
-        
-        // Register Supplementary cell
-        let headerRegistration = UICollectionView.SupplementaryRegistration(elementKind: ProgressHeaderView.elementKind, handler: supplementaryRegistrationHandler)
-        dataSource.supplementaryViewProvider = { supplementaryView, elementKind, indexPath in
-            return self.collectionView.dequeueConfiguredReusableSupplementary(using: headerRegistration, for: indexPath)
-        }
-        
+
         // Register cell
         let cellRegistration = UICollectionView.CellRegistration(handler: cellRegistrationHandler)
         
@@ -63,6 +57,12 @@ class ReminderListViewController: UICollectionViewController {
             (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: Reminder.ID) in
             // dequeue and return a cell using the cell registration
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
+        }
+        
+        // Register Supplementary cell
+        let headerRegistration = UICollectionView.SupplementaryRegistration(elementKind: ProgressHeaderView.elementKind, handler: supplementaryRegistrationHandler)
+        dataSource.supplementaryViewProvider = { supplementaryView, elementKind, indexPath in
+            return self.collectionView.dequeueConfiguredReusableSupplementary(using: headerRegistration, for: indexPath)
         }
         
         // call snapshot
