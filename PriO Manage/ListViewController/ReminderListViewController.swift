@@ -86,6 +86,7 @@ class ReminderListViewController: UICollectionViewController {
     private func listLayout() -> UICollectionViewLayout {
         // UICollectionLayoutListConfiguration creates a section in a list layout
         var listConfiguration = UICollectionLayoutListConfiguration(appearance: .grouped)
+        listConfiguration.headerMode = .supplementary
         listConfiguration.showsSeparators = false
         listConfiguration.backgroundColor = .prioNavigationBackground
         listConfiguration.trailingSwipeActionsConfigurationProvider = makeSwipeActions
