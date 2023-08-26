@@ -52,6 +52,9 @@ class ReminderListViewController: UICollectionViewController {
         // Register cell
         let cellRegistration = UICollectionView.CellRegistration(handler: cellRegistrationHandler)
         
+        // Register Supplementary vieww
+        let headerRegistration = UICollectionView.SupplementaryRegistration(elementKind: ProgressHeaderView.elementKind, handler: supplementaryRegistrationHandler)
+        
         // connect diffable data source to the collection view by passing in the collection view to its initializer
         dataSource = DataSource(collectionView: collectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: Reminder.ID) in
