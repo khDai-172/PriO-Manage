@@ -74,7 +74,7 @@ class ProgressHeaderView: UICollectionReusableView {
         
         backgroundColor = .clear
         containerView.backgroundColor = .clear
-        upperView.backgroundColor = .prioProgressUpperBackground
-        lowerView.backgroundColor = .prioProgressLowerBackground
+        upperView.backgroundColor = .prioListCellBackground
+        lowerView.backgroundColor = .prioGradientTodayEnd
     }
 }
