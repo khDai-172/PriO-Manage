@@ -67,6 +67,11 @@ class ReminderListViewController: UICollectionViewController {
         
     }
     
+    // MARK: - Header Registration Handler
+    func supplementaryRegistrationHandler(progressView: ProgressHeaderView, elementKind: String, indexPath: IndexPath) {
+        headerView = progressView
+    }
+    
     // MARK: - CollectionView Delegate
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         let id = filterReminders[indexPath.item].id
