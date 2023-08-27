@@ -13,7 +13,7 @@ class ProgressHeaderView: UICollectionReusableView {
     
     var progress: CGFloat = 0 {
         didSet {
-            heightConstraint?.constant = progress * bounds.height
+            lowerviewHeightConstraint?.constant = progress * bounds.height
             UIView.animate(withDuration: 0.2) { [weak self] in
                 self?.layoutIfNeeded()
             }
@@ -23,7 +23,7 @@ class ProgressHeaderView: UICollectionReusableView {
     private let upperView = UIView(frame: .zero)
     private let lowerView = UIView(frame: .zero)
     private let containerView = UIView(frame: .zero)
-    private var heightConstraint: NSLayoutConstraint?
+    private var lowerviewHeightConstraint: NSLayoutConstraint?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -69,8 +69,8 @@ class ProgressHeaderView: UICollectionReusableView {
         lowerView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         
         // make an adjustable height constraint for the lower view
-        heightConstraint = lowerView.heightAnchor.constraint(equalToConstant: 0)
-        heightConstraint?.isActive = true
+        lowerviewHeightConstraint = lowerView.heightAnchor.constraint(equalToConstant: 0)
+        lowerviewHeightConstraint?.isActive = true
         
         backgroundColor = .clear
         containerView.backgroundColor = .clear
