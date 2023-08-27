@@ -24,6 +24,11 @@ class ReminderListViewController: UICollectionViewController {
     
     var progress: CGFloat {
         let chunkSize = 1.0 / CGFloat(filterReminders.count)
+        let progress = filterReminders.reduce(0.0) {
+            let chunk = $1.isComplete ? chunkSize : 0
+            return $0 + chunk
+        }
+        return progress
     }
     
     var headerView: ProgressHeaderView?
