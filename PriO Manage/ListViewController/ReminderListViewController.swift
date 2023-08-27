@@ -22,6 +22,10 @@ class ReminderListViewController: UICollectionViewController {
         ReminderListStyle.today.name, ReminderListStyle.future.name, ReminderListStyle.all.name
     ])
     
+    var progress: CGFloat {
+        let chunkSize = 1.0 / CGFloat(filterReminders.count)
+    }
+    
     var headerView: ProgressHeaderView?
     
     // MARK: - viewDidLoad
