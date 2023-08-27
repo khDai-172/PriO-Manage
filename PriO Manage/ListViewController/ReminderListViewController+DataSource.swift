@@ -30,6 +30,7 @@ extension ReminderListViewController {
             snapshot.reloadItems(idsFiltered)
         }
         dataSource.apply(snapshot)
+        headerView?.progress = progress
     }
     
     // MARK: - Retrieve the reminder item using indexOfReminder(withId:)
