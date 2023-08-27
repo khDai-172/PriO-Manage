@@ -93,6 +93,15 @@ class ReminderListViewController: UICollectionViewController {
         pushDetailViewForReminder(withId: id)
         return false
     }
+    
+    // the system calls this method when the collection view is about to display the supplementary view.
+    override func collectionView(_ collectionView: UICollectionView, willDisplaySupplementaryView view: UICollectionReusableView, forElementKind elementKind: String, at indexPath: IndexPath) {
+        guard elementKind == ProgressHeaderView.elementKind,
+              let progressView = view as? ProgressHeaderView
+        else { return }
+        
+        progressView.progress = progress
+    }
 
     // MARK: - Configure collection view appearance using compositional layout
     private func listLayout() -> UICollectionViewLayout {
