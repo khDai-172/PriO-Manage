@@ -109,14 +109,14 @@ class ReminderListViewController: UICollectionViewController {
         var listConfiguration = UICollectionLayoutListConfiguration(appearance: .grouped)
         listConfiguration.headerMode = .supplementary
         listConfiguration.showsSeparators = false
-        listConfiguration.backgroundColor = .prioNavigationBackground
+        listConfiguration.backgroundColor = .clear
         listConfiguration.trailingSwipeActionsConfigurationProvider = makeSwipeActions
         return UICollectionViewCompositionalLayout.list(using: listConfiguration)
     }
 
     // MARK: - Refresh background function
     func refreshBackground() {
-        
+        collectionView.backgroundView = nil
     }
     
     // MARK: - Push DetailView For Reminder
