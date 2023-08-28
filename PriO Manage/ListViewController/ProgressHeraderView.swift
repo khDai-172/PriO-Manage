@@ -32,6 +32,7 @@ class ProgressHeaderView: UICollectionReusableView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        isAccessibilityElement = true
         prepareSubviews()
     }
     
@@ -41,6 +42,7 @@ class ProgressHeaderView: UICollectionReusableView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
+        accessibilityValue = String(format: valueFormat, Int(progress * 100.0))
         containerView.layer.masksToBounds = true
         containerView.layer.cornerRadius = 0.5 * containerView.bounds.width
         lowerviewHeightConstraint?.constant = progress * bounds.height
