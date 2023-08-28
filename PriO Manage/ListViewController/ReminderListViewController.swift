@@ -106,8 +106,8 @@ class ReminderListViewController: UICollectionViewController {
         guard elementKind == ProgressHeaderView.elementKind,
               let progressView = view as? ProgressHeaderView
         else { return }
-        
         progressView.progress = progress
+        
     }
 
     // MARK: - Configure collection view appearance using compositional layout

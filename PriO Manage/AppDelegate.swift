@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = .prioGradientTodayEnd
         UINavigationBar.appearance().backgroundColor = .prioNavigationBackground
         let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.configureWithTransparentBackground()
+        //navBarAppearance.configureWithTransparentBackground()
         
         UINavigationBar.appearance().scrollEdgeAppearance = navBarAppearance
         return true
