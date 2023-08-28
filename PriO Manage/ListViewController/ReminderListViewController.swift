@@ -37,6 +37,8 @@ class ReminderListViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        collectionView.backgroundColor = .prioListCellBackground
+        
         // CollectionView layout
         let listLayout = listLayout()
         collectionView.collectionViewLayout = listLayout
@@ -117,6 +119,7 @@ class ReminderListViewController: UICollectionViewController {
     // MARK: - Refresh background function
     func refreshBackground() {
         collectionView.backgroundView = nil
+        let backgroundView = UIView()
     }
     
     // MARK: - Push DetailView For Reminder

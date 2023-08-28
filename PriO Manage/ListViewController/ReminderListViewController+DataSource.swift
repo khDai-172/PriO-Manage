@@ -93,7 +93,7 @@ extension ReminderListViewController {
         
         // cell background config
         var backgroundConfig = UIBackgroundConfiguration.listPlainCell()
-        backgroundConfig.backgroundColor = .prioProgressLowerBackground
+        backgroundConfig.backgroundColor = .clear
         cell.backgroundConfiguration = backgroundConfig
     }
     
