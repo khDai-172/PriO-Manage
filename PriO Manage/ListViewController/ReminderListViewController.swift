@@ -114,6 +114,11 @@ class ReminderListViewController: UICollectionViewController {
         return UICollectionViewCompositionalLayout.list(using: listConfiguration)
     }
 
+    // MARK: - Refresh background function
+    func refreshBackground() {
+        
+    }
+    
     // MARK: - Push DetailView For Reminder
     func pushDetailViewForReminder(withId id: Reminder.ID) {
         let reminder = reminder(withId: id)
