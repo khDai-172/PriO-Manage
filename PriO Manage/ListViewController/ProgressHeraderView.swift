@@ -24,6 +24,9 @@ class ProgressHeaderView: UICollectionReusableView {
     private let lowerView = UIView(frame: .zero)
     private let containerView = UIView(frame: .zero)
     private var lowerviewHeightConstraint: NSLayoutConstraint?
+    private var valueFormat: String {
+        NSLocalizedString("%d percent", comment: "progress percentage value format")
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
