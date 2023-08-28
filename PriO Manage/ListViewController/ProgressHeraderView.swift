@@ -34,6 +34,7 @@ class ProgressHeaderView: UICollectionReusableView {
         super.init(frame: frame)
         isAccessibilityElement = true
         accessibilityLabel = NSLocalizedString("Progress", comment: "Progress view accessbility label")
+        accessibilityTraits.update(with: .updatesFrequently)
         prepareSubviews()
     }
     
