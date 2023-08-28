@@ -25,6 +25,7 @@ class ProgressHeaderView: UICollectionReusableView {
     private let upperView = UIView(frame: .zero)
     private let lowerView = UIView(frame: .zero)
     private let containerView = UIView(frame: .zero)
+    private let percentLabel = UILabel(frame: .zero)
     private var lowerviewHeightConstraint: NSLayoutConstraint?
     private var valueFormat: String {
         NSLocalizedString("%d percent", comment: "progress percentage value format")
@@ -48,16 +49,23 @@ class ProgressHeaderView: UICollectionReusableView {
         containerView.layer.masksToBounds = true
         containerView.layer.cornerRadius = 0.5 * containerView.bounds.width
         lowerviewHeightConstraint?.constant = progress * bounds.height
+        
+        percentLabel.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        percentLabel.textAlignment = .center
+        percentLabel.font = UIFont.systemFont(ofSize: 50, weight: .medium)
+        percentLabel.text = "\(Int(progress * 100))%"
     }
     
     func prepareSubviews() {
         containerView.addSubview(upperView)
         containerView.addSubview(lowerView)
+        containerView.insertSubview(percentLabel, aboveSubview: lowerView)
         addSubview(containerView)
         
         lowerView.translatesAutoresizingMaskIntoConstraints = false
         upperView.translatesAutoresizingMaskIntoConstraints = false
         containerView.translatesAutoresizingMaskIntoConstraints = false
+        percentLabel.translatesAutoresizingMaskIntoConstraints = false
         
         // Maintain a 1:1 fixed aspect ratio for the superview and container views.
         heightAnchor.constraint(equalTo: widthAnchor, multiplier: 1).isActive = true
@@ -65,8 +73,11 @@ class ProgressHeaderView: UICollectionReusableView {
         
         containerView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
         containerView.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
+        percentLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
+        percentLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
         containerView.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.85).isActive = true
+        percentLabel.widthAnchor.constraint(equalTo: widthAnchor).isActive = true
         
         upperView.topAnchor.constraint(equalTo: topAnchor).isActive = true
         upperView.bottomAnchor.constraint(equalTo: lowerView.bottomAnchor).isActive = true
@@ -84,6 +95,6 @@ class ProgressHeaderView: UICollectionReusableView {
         backgroundColor = .clear
         containerView.backgroundColor = .clear
         upperView.backgroundColor = .prioListCellBackground
-        lowerView.backgroundColor = .prioGradientTodayEnd
+        lowerView.backgroundColor = .prioGradientTodayBegin
     }
 }
