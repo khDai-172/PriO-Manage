@@ -13,7 +13,8 @@ extension CAGradientLayer {
     static func gradientLayer(for listStyle: ReminderListStyle, in frame: CGRect) -> Self {
         let layer = Self()
         layer.colors = colors(for: listStyle)
-        
+        layer.frame = frame
+        return layer
     }
     
     static func colors(for listStyle: ReminderListStyle) -> [CGColor] {
