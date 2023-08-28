@@ -11,19 +11,21 @@ import UIKit
 extension CAGradientLayer {
     
     static func colors(for listStyle: ReminderListStyle) -> [CGColor] {
-        let beginColr: UIColor
+        let beginColor: UIColor
         let endColor: UIColor
         
         switch listStyle {
         case .today:
-            beginColr = .prioGradientTodayBegin
+            beginColor = .prioGradientTodayBegin
             endColor = .prioGradientTodayEnd
         case .future:
-            beginColr = .prioGradientFutureBegin
+            beginColor = .prioGradientFutureBegin
             endColor = .prioGradientFutureEnd
         case .all:
-            beginColr = .prioGradientAllBegin
+            beginColor = .prioGradientAllBegin
             endColor = .prioGradientAllEnd
         }
+        
+        return [beginColor.cgColor, endColor.cgColor]
     }
 }
