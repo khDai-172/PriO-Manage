@@ -10,6 +10,10 @@ import UIKit
 // UIKit provides the CAGradientLayer class to represent a color gradient.
 extension CAGradientLayer {
     
+    static func gradientLayer(for listStyle: ReminderListStyle, in frame: CGRect) -> Self {
+        
+    }
+    
     static func colors(for listStyle: ReminderListStyle) -> [CGColor] {
         let beginColor: UIColor
         let endColor: UIColor
