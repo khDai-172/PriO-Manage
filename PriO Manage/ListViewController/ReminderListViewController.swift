@@ -120,6 +120,7 @@ class ReminderListViewController: UICollectionViewController {
     func refreshBackground() {
         collectionView.backgroundView = nil
         let backgroundView = UIView()
+        let gradientLayer = CAGradientLayer.gradientLayer(for: listStyle, in: collectionView.frame)
     }
     
     // MARK: - Push DetailView For Reminder
