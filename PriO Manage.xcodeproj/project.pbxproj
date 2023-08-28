@@ -114,8 +114,8 @@
 				831365462A812E8800578093 /* Reminder.swift */,
 				831365482A822B8B00578093 /* Date+PriOManage.swift */,
 				8313654A2A822BD600578093 /* UIColor+PriOManage.swift */,
-				8313656C2A96FC8E00578093 /* ReminderListStyle.swift */,
 				831365702A9C462100578093 /* CAGradientLayer+ListStyle.swift */,
+				8313656C2A96FC8E00578093 /* ReminderListStyle.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
