@@ -81,7 +81,12 @@ class ReminderListViewController: UICollectionViewController {
         
         // show data source onto the collection view
         collectionView.dataSource = dataSource
-        
+    }
+    
+    // MARK: - viewWillAppear
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        refreshBackground()
     }
     
     // MARK: - Header Registration Handler
@@ -122,6 +127,7 @@ class ReminderListViewController: UICollectionViewController {
         let backgroundView = UIView()
         let gradientLayer = CAGradientLayer.gradientLayer(for: listStyle, in: collectionView.frame)
         backgroundView.layer.addSublayer(gradientLayer)
+        collectionView.backgroundView = backgroundView
     }
     
     // MARK: - Push DetailView For Reminder
