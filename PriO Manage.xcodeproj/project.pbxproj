@@ -121,13 +121,13 @@
 			children = (
 				831365462A812E8800578093 /* Reminder.swift */,
 				831365762A9D9EA500578093 /* Reminder+EKReminder.swift */,
+				831365782A9E1EEA00578093 /* ReminderStore.swift */,
 				831365482A822B8B00578093 /* Date+PriOManage.swift */,
 				8313654A2A822BD600578093 /* UIColor+PriOManage.swift */,
 				831365702A9C462100578093 /* CAGradientLayer+ListStyle.swift */,
 				8313656C2A96FC8E00578093 /* ReminderListStyle.swift */,
 				831365722A9D86C100578093 /* PrioError.swift */,
 				831365742A9D8B1000578093 /* EKEventStore+AsyncFetch.swift */,
-				831365782A9E1EEA00578093 /* ReminderStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
