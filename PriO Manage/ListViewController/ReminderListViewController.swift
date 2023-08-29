@@ -87,7 +87,7 @@ class ReminderListViewController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         refreshBackground()
-        refreshProgressView()
+        changeProgressViewLayer()
     }
     
     // MARK: - Header Registration Handler
@@ -131,7 +131,7 @@ class ReminderListViewController: UICollectionViewController {
     }
     
     // MARK: - Refresh Progress view background color
-    func refreshProgressView() {
+    func changeProgressViewLayer() {
         DispatchQueue.main.async {
             let gradientLayer = CAGradientLayer.gradientLayer(for: self.listStyle, in: self.headerView?.frame ?? CGRect())
             self.headerView?.getLowerView().layer.addSublayer(gradientLayer)
