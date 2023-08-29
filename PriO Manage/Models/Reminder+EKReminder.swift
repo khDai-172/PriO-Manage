@@ -10,6 +10,8 @@ import Foundation
 
 extension Reminder {
     init(with ekReminder: EKReminder) throws {
-        
+        guard let dueDate = ekReminder.alarms?.first?.absoluteDate else {
+            throw PrioError.reaminderHasNoDueDate
+        }
     }
 }
