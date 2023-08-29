@@ -9,6 +9,8 @@ import Foundation
 
 // Types conforming to LocalizedError can provide localized messages that describe their errors and why they occur.
 // The LocalizedError protocol provides a default implementation of the errorDescription property that returns a nonspecific message.
+// Because LocalizedError provides a default implementation, you’re not required to implement this property. However, your users benefit from clear information about why errors occur.
+
 enum PrioError: LocalizedError {
     case failedReadingReminders
     

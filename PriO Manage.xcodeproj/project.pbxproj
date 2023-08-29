@@ -33,6 +33,7 @@
 		8313656F2A985B3E00578093 /* ProgressHeraderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313656E2A985B3E00578093 /* ProgressHeraderView.swift */; };
 		831365712A9C462100578093 /* CAGradientLayer+ListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831365702A9C462100578093 /* CAGradientLayer+ListStyle.swift */; };
 		831365732A9D86C100578093 /* PrioError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831365722A9D86C100578093 /* PrioError.swift */; };
+		831365752A9D8B1000578093 /* EKEventStore+AsyncFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831365742A9D8B1000578093 /* EKEventStore+AsyncFetch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,6 +65,7 @@
 		8313656E2A985B3E00578093 /* ProgressHeraderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHeraderView.swift; sourceTree = "<group>"; };
 		831365702A9C462100578093 /* CAGradientLayer+ListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+ListStyle.swift"; sourceTree = "<group>"; };
 		831365722A9D86C100578093 /* PrioError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrioError.swift; sourceTree = "<group>"; };
+		831365742A9D8B1000578093 /* EKEventStore+AsyncFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EKEventStore+AsyncFetch.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				831365702A9C462100578093 /* CAGradientLayer+ListStyle.swift */,
 				8313656C2A96FC8E00578093 /* ReminderListStyle.swift */,
 				831365722A9D86C100578093 /* PrioError.swift */,
+				831365742A9D8B1000578093 /* EKEventStore+AsyncFetch.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				831365322A8129BC00578093 /* AppDelegate.swift in Sources */,
 				8313654F2A82478B00578093 /* ReminderListViewController+DataSource.swift in Sources */,
 				8313655D2A8BB76500578093 /* ReminderViewController+CellConfiguration.swift in Sources */,
+				831365752A9D8B1000578093 /* EKEventStore+AsyncFetch.swift in Sources */,
 				831365342A8129BC00578093 /* SceneDelegate.swift in Sources */,
 				8313655A2A8A1B0500578093 /* ReminderController+Section.swift in Sources */,
 				831365732A9D86C100578093 /* PrioError.swift in Sources */,
