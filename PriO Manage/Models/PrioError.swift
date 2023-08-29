@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Types conforming to LocalizedError can provide localized messages that describe their errors and why they occur.
 enum PrioError: LocalizedError {
-    
+    case failedReadingReminders
 }
