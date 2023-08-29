@@ -34,6 +34,7 @@
 		831365712A9C462100578093 /* CAGradientLayer+ListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831365702A9C462100578093 /* CAGradientLayer+ListStyle.swift */; };
 		831365732A9D86C100578093 /* PrioError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831365722A9D86C100578093 /* PrioError.swift */; };
 		831365752A9D8B1000578093 /* EKEventStore+AsyncFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831365742A9D8B1000578093 /* EKEventStore+AsyncFetch.swift */; };
+		831365772A9D9EA500578093 /* Reminder+EKReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831365762A9D9EA500578093 /* Reminder+EKReminder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		831365702A9C462100578093 /* CAGradientLayer+ListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+ListStyle.swift"; sourceTree = "<group>"; };
 		831365722A9D86C100578093 /* PrioError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrioError.swift; sourceTree = "<group>"; };
 		831365742A9D8B1000578093 /* EKEventStore+AsyncFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EKEventStore+AsyncFetch.swift"; sourceTree = "<group>"; };
+		831365762A9D9EA500578093 /* Reminder+EKReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reminder+EKReminder.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				8313656C2A96FC8E00578093 /* ReminderListStyle.swift */,
 				831365722A9D86C100578093 /* PrioError.swift */,
 				831365742A9D8B1000578093 /* EKEventStore+AsyncFetch.swift */,
+				831365762A9D9EA500578093 /* Reminder+EKReminder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				831365492A822B8B00578093 /* Date+PriOManage.swift in Sources */,
 				8313656F2A985B3E00578093 /* ProgressHeraderView.swift in Sources */,
 				8313656D2A96FC8E00578093 /* ReminderListStyle.swift in Sources */,
+				831365772A9D9EA500578093 /* Reminder+EKReminder.swift in Sources */,
 				831365652A8F202800578093 /* UIContentConfiguration+Stateless.swift in Sources */,
 				831365692A9203AF00578093 /* TextViewContentView.swift in Sources */,
 				8313654B2A822BD600578093 /* UIColor+PriOManage.swift in Sources */,
