@@ -9,5 +9,7 @@ import EventKit
 import Foundation
 
 extension Reminder {
-    
+    init(with ekReminder: EKReminder) throws {
+        
+    }
 }
