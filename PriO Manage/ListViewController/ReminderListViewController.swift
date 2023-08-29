@@ -87,6 +87,7 @@ class ReminderListViewController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         refreshBackground()
+        refreshProgressView()
     }
     
     // MARK: - Header Registration Handler
@@ -107,7 +108,6 @@ class ReminderListViewController: UICollectionViewController {
               let progressView = view as? ProgressHeaderView
         else { return }
         progressView.progress = progress
-        
     }
 
     // MARK: - Configure collection view appearance using compositional layout
@@ -128,6 +128,14 @@ class ReminderListViewController: UICollectionViewController {
         let gradientLayer = CAGradientLayer.gradientLayer(for: listStyle, in: collectionView.frame)
         backgroundView.layer.addSublayer(gradientLayer)
         collectionView.backgroundView = backgroundView
+    }
+    
+    // MARK: - Refresh Progress view background color
+    func refreshProgressView() {
+        DispatchQueue.main.async {
+            let gradientLayer = CAGradientLayer.gradientLayer(for: self.listStyle, in: self.headerView?.frame ?? CGRect())
+            self.headerView?.getLowerView().layer.addSublayer(gradientLayer)
+        }
     }
     
     // MARK: - Push DetailView For Reminder

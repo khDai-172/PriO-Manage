@@ -38,5 +38,6 @@ extension ReminderListViewController {
         listStyle = ReminderListStyle(rawValue: sender.selectedSegmentIndex) ?? .today
         updateSnapshot()
         refreshBackground()
+        refreshProgressView()
     }
 }

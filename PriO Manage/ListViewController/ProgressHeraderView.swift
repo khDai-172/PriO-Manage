@@ -53,7 +53,7 @@ class ProgressHeaderView: UICollectionReusableView {
         percentLabel.heightAnchor.constraint(equalToConstant: 100).isActive = true
         percentLabel.textAlignment = .center
         percentLabel.font = UIFont.systemFont(ofSize: 50, weight: .medium)
-        percentLabel.text = "\(Int(progress * 100))%"
+        percentLabel.text = "\(Int(round(progress * 100.0)))%"
     }
     
     func prepareSubviews() {
@@ -95,6 +95,10 @@ class ProgressHeaderView: UICollectionReusableView {
         backgroundColor = .clear
         containerView.backgroundColor = .clear
         upperView.backgroundColor = .prioListCellBackground
-        lowerView.backgroundColor = .prioGradientTodayBegin
+        //lowerView.backgroundColor = .prioGradientTodayBegin
+    }
+    
+    func getLowerView() -> UIView {
+        return lowerView
     }
 }
