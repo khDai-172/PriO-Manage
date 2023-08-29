@@ -12,4 +12,7 @@ import Foundation
 
 extension EKEventStore {
     
+    func reminders(matching predicate: NSPredicate) async throws -> [EKReminder] {
+        
+    }
 }
