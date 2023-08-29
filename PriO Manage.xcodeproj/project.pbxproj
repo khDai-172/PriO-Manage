@@ -32,6 +32,7 @@
 		8313656D2A96FC8E00578093 /* ReminderListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313656C2A96FC8E00578093 /* ReminderListStyle.swift */; };
 		8313656F2A985B3E00578093 /* ProgressHeraderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313656E2A985B3E00578093 /* ProgressHeraderView.swift */; };
 		831365712A9C462100578093 /* CAGradientLayer+ListStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831365702A9C462100578093 /* CAGradientLayer+ListStyle.swift */; };
+		831365732A9D86C100578093 /* PrioError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831365722A9D86C100578093 /* PrioError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		8313656C2A96FC8E00578093 /* ReminderListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListStyle.swift; sourceTree = "<group>"; };
 		8313656E2A985B3E00578093 /* ProgressHeraderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressHeraderView.swift; sourceTree = "<group>"; };
 		831365702A9C462100578093 /* CAGradientLayer+ListStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CAGradientLayer+ListStyle.swift"; sourceTree = "<group>"; };
+		831365722A9D86C100578093 /* PrioError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrioError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				8313654A2A822BD600578093 /* UIColor+PriOManage.swift */,
 				831365702A9C462100578093 /* CAGradientLayer+ListStyle.swift */,
 				8313656C2A96FC8E00578093 /* ReminderListStyle.swift */,
+				831365722A9D86C100578093 /* PrioError.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				8313655D2A8BB76500578093 /* ReminderViewController+CellConfiguration.swift in Sources */,
 				831365342A8129BC00578093 /* SceneDelegate.swift in Sources */,
 				8313655A2A8A1B0500578093 /* ReminderController+Section.swift in Sources */,
+				831365732A9D86C100578093 /* PrioError.swift in Sources */,
 				8313656B2A93114D00578093 /* DatePickerContentView.swift in Sources */,
 				831365472A812E8800578093 /* Reminder.swift in Sources */,
 			);
