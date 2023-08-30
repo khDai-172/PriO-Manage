@@ -19,6 +19,9 @@ extension ReminderListViewController {
         NSLocalizedString("Not completed", comment: "Reminder not completed value")
     }
     
+    // MARK: - Reminder Store
+    private var reminderStore: ReminderStore { ReminderStore.shared }
+    
     // MARK: - Update Snapshot
     func updateSnapshot(reloading idsThatChanged: [Reminder.ID] = []) {
         let idsFiltered = idsThatChanged.filter { id in filterReminders.contains(where: { $0.id == id }) }
