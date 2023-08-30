@@ -22,9 +22,13 @@ extension ReminderListViewController {
     // MARK: - Reminder Store
     private var reminderStore: ReminderStore { ReminderStore.shared }
     
+    // You must call functions marked as async from within a Task or another asynchronous function.
     func prepareReminderStore() {
+        // By creating a Task, you create a new unit of work that executes asynchronously.
         Task {
-            
+            do {
+                try await reminderStore.requestAccess()
+            }
         }
     }
     
