@@ -29,6 +29,10 @@ extension ReminderListViewController {
             do {
                 try await reminderStore.requestAccess()
                 reminders = try await reminderStore.readAll()
+            } catch PrioError.accessDenied, PrioError.accessRestricted {
+                #if DEBUG
+                reminders = Reminder.sampleData
+                #endif
             }
         }
     }
