@@ -26,5 +26,6 @@ final class ReminderStore {
         guard isAvailable else {
             throw PrioError.accessDenied
         }
+        let predicate = ekStore.predicateForReminders(in: nil)
     }
 }
