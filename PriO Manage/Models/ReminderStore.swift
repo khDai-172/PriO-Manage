@@ -23,7 +23,7 @@ final class ReminderStore {
     }
     
     func requestAccess() async throws {
-        
+        let status = EKEventStore.authorizationStatus(for: .reminder)
     }
     
     func readAll() async throws -> [Reminder] {
