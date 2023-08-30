@@ -28,6 +28,7 @@ extension ReminderListViewController {
         Task {
             do {
                 try await reminderStore.requestAccess()
+                reminders = try await reminderStore.readAll()
             }
         }
     }
