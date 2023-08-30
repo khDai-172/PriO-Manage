@@ -35,7 +35,10 @@ final class ReminderStore {
         let reminders: [Reminder] = try ekReminders.compactMap { ekReminder in
             do {
                 return try Reminder(with: ekReminder)
+            } catch PrioError.reaminderHasNoDueDate {
+                return nil
             }
         }
+        return reminders
     }
 }
