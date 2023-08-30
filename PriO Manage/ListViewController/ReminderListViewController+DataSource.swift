@@ -35,8 +35,10 @@ extension ReminderListViewController {
                 reminders = Reminder.sampleData
                 #endif
             } catch {
+                // Similar to a default case in a switch statement, this catch block catches any remaining error.
                 showError(error)
             }
+            updateSnapshot()
         }
     }
     
