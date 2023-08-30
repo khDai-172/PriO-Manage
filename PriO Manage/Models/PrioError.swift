@@ -12,11 +12,15 @@ import Foundation
 // Because LocalizedError provides a default implementation, you’re not required to implement this property. However, your users benefit from clear information about why errors occur.
 
 enum PrioError: LocalizedError {
+    
+    case accessDenied
     case failedReadingReminders
     case reaminderHasNoDueDate
     
     var errorDescription: String? {
         switch self {
+        case .accessDenied:
+            return NSLocalizedString("The app doesn't have permission to read reminders.", comment: "access denied error description")
         case .failedReadingReminders:
             return NSLocalizedString("Failed to read reminders.", comment: "failed reading reminders error description")
         case .reaminderHasNoDueDate:

@@ -17,6 +17,7 @@ final class ReminderStore {
     
     private let ekStore = EKEventStore()
     
+    // use this property to determine if the user has granted access to their reminder data. 
     var isAvailable: Bool {
         EKEventStore.authorizationStatus(for: .reminder) == .authorized
     }
