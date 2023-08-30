@@ -170,6 +170,10 @@ class ReminderListViewController: UICollectionViewController {
     func showError(_ error: Error) {
         let alertTile = NSLocalizedString("Error", comment: "Error alert title")
         let alert = UIAlertController(title: alertTile, message: error.localizedDescription, preferredStyle: .alert)
+        //The alert controller displays the title and message. Because you chose the .alert style, the controller displays modally.
+        
+        let actionTitle = NSLocalizedString("OK", comment: "Alert OK button title")
+        
     }
 }
 
