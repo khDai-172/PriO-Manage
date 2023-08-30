@@ -173,7 +173,13 @@ class ReminderListViewController: UICollectionViewController {
         //The alert controller displays the title and message. Because you chose the .alert style, the controller displays modally.
         
         let actionTitle = NSLocalizedString("OK", comment: "Alert OK button title")
-        
+        alert.addAction(
+            UIAlertAction(
+                title: actionTitle, style: .default,
+                         handler: { [weak self] _ in
+                             self?.dismiss(animated: true)
+                         }))
+        present(alert, animated: true, completion: nil)
     }
 }
 
