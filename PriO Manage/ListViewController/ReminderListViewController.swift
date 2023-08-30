@@ -165,5 +165,10 @@ class ReminderListViewController: UICollectionViewController {
         deleteAction.backgroundColor = .orange
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
+    
+    // MARK: - Show errors
+    func showError(_ error: Error) {
+        
+    }
 }
 
