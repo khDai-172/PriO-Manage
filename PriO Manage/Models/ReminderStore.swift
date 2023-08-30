@@ -23,6 +23,8 @@ final class ReminderStore {
     }
     
     func readAll() async throws -> [Reminder] {
-        
+        guard isAvailable else {
+            throw PrioError.accessDenied
+        }
     }
 }
