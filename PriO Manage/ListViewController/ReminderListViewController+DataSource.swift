@@ -25,6 +25,7 @@ extension ReminderListViewController {
     // You must call functions marked as async from within a Task or another asynchronous function.
     func prepareReminderStore() {
         // By creating a Task, you create a new unit of work that executes asynchronously.
+        // Swift error handling has similarities to a switch statement. If a function in the do block throws an error, that error falls through until it finds a matching catch block.
         Task {
             do {
                 try await reminderStore.requestAccess()
@@ -33,6 +34,8 @@ extension ReminderListViewController {
                 #if DEBUG
                 reminders = Reminder.sampleData
                 #endif
+            } catch {
+                showError(error)
             }
         }
     }
