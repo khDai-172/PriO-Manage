@@ -169,7 +169,7 @@ class ReminderListViewController: UICollectionViewController {
     // MARK: - Show errors
     func showError(_ error: Error) {
         let alertTile = NSLocalizedString("Error", comment: "Error alert title")
-        
+        let alert = UIAlertController(title: alertTile, message: error.localizedDescription, preferredStyle: .alert)
     }
 }
 
