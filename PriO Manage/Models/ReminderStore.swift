@@ -21,4 +21,8 @@ final class ReminderStore {
     var isAvailable: Bool {
         EKEventStore.authorizationStatus(for: .reminder) == .authorized
     }
+    
+    func readAll() async throws -> [Reminder] {
+        
+    }
 }
