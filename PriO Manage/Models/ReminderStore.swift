@@ -17,7 +17,7 @@ final class ReminderStore {
     
     private let ekStore = EKEventStore()
     
-    // use this property to determine if the user has granted access to their reminder data. 
+    // use this property to determine if the user has granted access to their reminder data.
     var isAvailable: Bool {
         EKEventStore.authorizationStatus(for: .reminder) == .authorized
     }
@@ -26,6 +26,16 @@ final class ReminderStore {
         guard isAvailable else {
             throw PrioError.accessDenied
         }
+        
         let predicate = ekStore.predicateForReminders(in: nil)
+        //This predicate narrows the results to only reminder items.
+        
+        let ekReminders = try await ekStore.reminders(matching: predicate)
+        
+        let reminders: [Reminder] = try ekReminders.compactMap { ekReminder in
+            do {
+                return try Reminder(with: ekReminder)
+            }
+        }
     }
 }

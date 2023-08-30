@@ -16,7 +16,7 @@ class ProgressHeaderView: UICollectionReusableView {
             setNeedsLayout()
             //Calling setNeedsLayout() invalidates the current layout and triggers an update.
             lowerviewHeightConstraint?.constant = progress * bounds.height
-            UIView.animate(withDuration: 0.2) { [weak self] in
+            UIView.animate(withDuration: 0.4) { [weak self] in
                 self?.layoutIfNeeded()
             }
         }
