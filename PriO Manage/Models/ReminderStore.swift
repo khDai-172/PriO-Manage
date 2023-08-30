@@ -22,6 +22,10 @@ final class ReminderStore {
         EKEventStore.authorizationStatus(for: .reminder) == .authorized
     }
     
+    func requestAccess() async throws {
+        
+    }
+    
     func readAll() async throws -> [Reminder] {
         guard isAvailable else {
             throw PrioError.accessDenied
