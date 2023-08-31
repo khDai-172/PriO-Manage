@@ -81,6 +81,8 @@ class ReminderListViewController: UICollectionViewController {
         
         // show data source onto the collection view
         collectionView.dataSource = dataSource
+        
+        prepareReminderStore()
     }
     
     // MARK: - viewWillAppear
