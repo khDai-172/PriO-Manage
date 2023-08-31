@@ -87,9 +87,13 @@ extension ReminderListViewController {
     }
     
     // MARK: - Add a reminder
+    // EventKit assigns unique identifiers to reminders. You’ll start by creating a mutable copy of the reminder so that it can receive its new identifier.
     func addReminder(_ reminder: Reminder) {
         var reminder = reminder
-        reminders.append(reminder)
+        do {
+            let idFromStore = try reminderStore.save(reminder)
+            reminders.append(reminder)
+        }
     }
     
     // MARK: - Delete a reminder with an ID
