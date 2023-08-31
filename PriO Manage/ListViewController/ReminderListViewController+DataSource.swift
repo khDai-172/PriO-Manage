@@ -88,6 +88,7 @@ extension ReminderListViewController {
     
     // MARK: - Add a reminder
     func addReminder(_ reminder: Reminder) {
+        var reminder = reminder
         reminders.append(reminder)
     }
     
