@@ -60,4 +60,8 @@ final class ReminderStore {
         }
         return reminders
     }
+    
+    private func read(with id: Reminder.ID) throws -> EKReminder {
+        
+    }
 }

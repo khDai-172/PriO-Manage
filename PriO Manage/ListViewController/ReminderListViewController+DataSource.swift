@@ -30,6 +30,7 @@ extension ReminderListViewController {
             do {
                 try await reminderStore.requestAccess()
                 reminders = try await reminderStore.readAll()
+                NotificationCenter.default.addObserver(self, selector: #selector(eventStoreChanged(_:)), name: .EKEventStoreChanged, object: nil)
             } catch PrioError.accessDenied, PrioError.accessRestricted {
                 #if DEBUG
                 reminders = Reminder.sampleData
