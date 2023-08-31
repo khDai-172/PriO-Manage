@@ -82,6 +82,7 @@ extension ReminderListViewController {
     // MARK: - Update the reminder item
     func updateReminder(_ reminder: Reminder) {
         do {
+            try reminderStore.save(reminder)
             let index = reminders.indexOfReminder(withId: reminder.id)
             // assign updated reminder item to outdated reminder item
             reminders[index] = reminder
