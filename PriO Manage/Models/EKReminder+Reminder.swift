@@ -9,5 +9,7 @@ import EventKit
 import Foundation
 
 extension EKReminder {
-    
+    func update(using reminder: Reminder, in store: EKEventStore) {
+        
+    }
 }
