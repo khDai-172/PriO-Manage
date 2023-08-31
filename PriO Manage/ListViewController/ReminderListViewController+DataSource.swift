@@ -94,6 +94,8 @@ extension ReminderListViewController {
             let idFromStore = try reminderStore.save(reminder)
             reminder.id = idFromStore
             reminders.append(reminder)
+        } catch PrioError.accessDenied {
+            
         }
     }
     
