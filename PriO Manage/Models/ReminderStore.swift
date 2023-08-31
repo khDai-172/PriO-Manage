@@ -74,5 +74,9 @@ final class ReminderStore {
         guard isAvailable else {
             throw PrioError.accessDenied
         }
+        let ekReminder: EKReminder
+        do {
+            ekReminder = try read(with: reminder.id)
+        }
     }
 }
