@@ -10,6 +10,8 @@ import Foundation
 
 extension EKReminder {
     func update(using reminder: Reminder, in store: EKEventStore) {
-        
+        title = reminder.title
+        notes = reminder.notes
+        isCompleted = reminder.isComplete
     }
 }
