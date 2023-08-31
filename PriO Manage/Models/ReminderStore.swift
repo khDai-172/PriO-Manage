@@ -80,5 +80,8 @@ final class ReminderStore {
         } catch {
             ekReminder = EKReminder(eventStore: ekStore)
         }
+        ekReminder.update(using: reminder, in: ekStore)
+        try ekStore.save(ekReminder, commit: true)
+        return ekReminder.calendarItemIdentifier
     }
 }
