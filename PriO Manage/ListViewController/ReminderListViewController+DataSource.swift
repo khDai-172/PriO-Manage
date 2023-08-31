@@ -42,9 +42,10 @@ extension ReminderListViewController {
         }
     }
     
+    // Reload all reminders from EventKit.
     func reminderStoreChanged() {
         Task {
-            
+            reminders = try await reminderStore.readAll()
         }
     }
     
