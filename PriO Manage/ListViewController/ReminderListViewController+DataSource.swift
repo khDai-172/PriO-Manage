@@ -96,6 +96,8 @@ extension ReminderListViewController {
             reminders.append(reminder)
         } catch PrioError.accessDenied {
             
+        } catch {
+            showError(error)
         }
     }
     
