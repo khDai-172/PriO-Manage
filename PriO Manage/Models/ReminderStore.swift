@@ -65,5 +65,6 @@ final class ReminderStore {
         guard let ekReminder = ekStore.calendarItem(withIdentifier: id) as? EKReminder else {
             throw PrioError.failedReadingCalendarItem
         }
+        return ekReminder
     }
 }

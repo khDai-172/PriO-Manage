@@ -36,6 +36,7 @@
 		831365752A9D8B1000578093 /* EKEventStore+AsyncFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831365742A9D8B1000578093 /* EKEventStore+AsyncFetch.swift */; };
 		831365772A9D9EA500578093 /* Reminder+EKReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831365762A9D9EA500578093 /* Reminder+EKReminder.swift */; };
 		831365792A9E1EEA00578093 /* ReminderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 831365782A9E1EEA00578093 /* ReminderStore.swift */; };
+		8313657B2AA037EF00578093 /* EKReminder+Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8313657A2AA037EF00578093 /* EKReminder+Reminder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,7 @@
 		831365742A9D8B1000578093 /* EKEventStore+AsyncFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EKEventStore+AsyncFetch.swift"; sourceTree = "<group>"; };
 		831365762A9D9EA500578093 /* Reminder+EKReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reminder+EKReminder.swift"; sourceTree = "<group>"; };
 		831365782A9E1EEA00578093 /* ReminderStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderStore.swift; sourceTree = "<group>"; };
+		8313657A2AA037EF00578093 /* EKReminder+Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EKReminder+Reminder.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				8313656C2A96FC8E00578093 /* ReminderListStyle.swift */,
 				831365722A9D86C100578093 /* PrioError.swift */,
 				831365742A9D8B1000578093 /* EKEventStore+AsyncFetch.swift */,
+				8313657A2AA037EF00578093 /* EKReminder+Reminder.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				8313655D2A8BB76500578093 /* ReminderViewController+CellConfiguration.swift in Sources */,
 				831365752A9D8B1000578093 /* EKEventStore+AsyncFetch.swift in Sources */,
 				831365342A8129BC00578093 /* SceneDelegate.swift in Sources */,
+				8313657B2AA037EF00578093 /* EKReminder+Reminder.swift in Sources */,
 				8313655A2A8A1B0500578093 /* ReminderController+Section.swift in Sources */,
 				831365732A9D86C100578093 /* PrioError.swift in Sources */,
 				831365792A9E1EEA00578093 /* ReminderStore.swift in Sources */,
