@@ -69,7 +69,10 @@ final class ReminderStore {
     }
     
     @discardableResult
+    // You won’t use the identifier that this method returns in all situations. The @discardableResult attribute instructs the compiler to omit warnings in cases where the call site doesn’t capture the return value.
     func save(_ reminder: Reminder) throws -> Reminder.ID {
-        
+        guard isAvailable else {
+            throw PrioError.accessDenied
+        }
     }
 }
