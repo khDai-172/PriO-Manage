@@ -46,6 +46,7 @@ extension ReminderListViewController {
     func reminderStoreChanged() {
         Task {
             reminders = try await reminderStore.readAll()
+            updateSnapshot()
         }
     }
     
