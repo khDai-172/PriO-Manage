@@ -89,7 +89,7 @@ class ReminderListViewController: UICollectionViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         refreshBackground()
-        changeProgressViewLayer()
+        //changeProgressViewLayer()
     }
     
     // MARK: - Header Registration Handler

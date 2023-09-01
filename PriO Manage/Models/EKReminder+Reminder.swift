@@ -24,9 +24,9 @@ extension EKReminder {
             if comparison != .orderedSame {
                 removeAlarm(alarm)
             }
-            if !hasAlarms {
-                addAlarm(EKAlarm(absoluteDate: reminder.dueDate))
-            }
+        }
+        if !hasAlarms {
+            addAlarm(EKAlarm(absoluteDate: reminder.dueDate))
         }
     }
 }

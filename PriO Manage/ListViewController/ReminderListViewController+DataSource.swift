@@ -86,6 +86,9 @@ extension ReminderListViewController {
             let index = reminders.indexOfReminder(withId: reminder.id)
             // assign updated reminder item to outdated reminder item
             reminders[index] = reminder
+        } catch PrioError.accessDenied {
+        } catch {
+            showError(error)
         }
     }
     
@@ -97,8 +100,8 @@ extension ReminderListViewController {
             let idFromStore = try reminderStore.save(reminder)
             reminder.id = idFromStore
             reminders.append(reminder)
+            print(reminders)
         } catch PrioError.accessDenied {
-            
         } catch {
             showError(error)
         }
@@ -106,8 +109,14 @@ extension ReminderListViewController {
     
     // MARK: - Delete a reminder with an ID
     func deleteReminder(with id: Reminder.ID) {
-        let index = reminders.indexOfReminder(withId: id)
-        reminders.remove(at: index)
+        do {
+            try reminderStore.remove(with: id)
+            let index = reminders.indexOfReminder(withId: id)
+            reminders.remove(at: index)
+        } catch PrioError.accessDenied {
+        } catch {
+            showError(error)
+        }
     }
     
     // MARK: - Set cell's content and appearance configuration handler
